@@ -2,20 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Modo Light */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply font-sans bg-lightBackground text-lightText;
+}
+
+/* Modo Dark */
+.dark body {
+  @apply bg-darkBackground text-darkTextLightElements;
+}
+
+select:focus,
+select:focus-visible,
+input:focus,
+input:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+grammarly-desktop-integration {
+  display: none !important;
 }
