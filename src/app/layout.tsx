@@ -4,8 +4,10 @@ import { useReducer } from "react";
 import { Nunito_Sans } from "next/font/google";
 
 import { Header } from "@/components/Header";
+import { METADATA } from "@/i18n/es";
 import { Providers } from "@/redux/provider";
 import "./globals.css";
+
 
 
 const nunitoSans = Nunito_Sans({
@@ -14,10 +16,6 @@ const nunitoSans = Nunito_Sans({
   weight: ["300", "400", "700"],
 });
 
-const metadata = {
-	title: "Countries API",
-	description: "Aplicación de información de paísesExplora información detallada sobre países, incluyendo datos, imágenes de banderas y más.",
-};
 
 export default function RootLayout({ children }: ChildrenProps) {
 	const [darkMode, setDarkMode] = useReducer(
@@ -28,8 +26,8 @@ export default function RootLayout({ children }: ChildrenProps) {
 	return (
 		<html lang="es">
 			<head>
-				<meta name="description" content={metadata.description} />
-				<title>{metadata.title}</title>
+				<meta name={METADATA.name} content={METADATA.description} />
+				<title>{METADATA.title}</title>
 			</head>
 			<body className={`${darkMode ? "dark" : "light"}  ${nunitoSans.variable} overflow-hidden`}>
 				<Header mode={darkMode} onClick={setDarkMode} />

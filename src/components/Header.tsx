@@ -5,6 +5,7 @@ import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
 import { Button } from "./Button";
+import { TEXTTITLE } from "@/i18n/es";
 
 function Header({ mode, onClick }: HeaderProps) {
   return (
@@ -13,7 +14,7 @@ function Header({ mode, onClick }: HeaderProps) {
         <ul className="flex items-center justify-between">
           <li>
             <Link href="/">
-              <h1 className="text-lg font-extrabold">Where in the World?</h1>
+              <h1 className="text-lg font-extrabold">{TEXTTITLE.title}</h1>
             </Link>
           </li>
           <li>

@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 import { regions } from "@/constant/region";
+import { TEXTINPUT } from "@/i18n/es";
 
 
 function Form({
@@ -21,7 +22,7 @@ function Form({
           id="search"
           name="search"
           type="text"
-          placeholder="Search for a country..."
+          placeholder={TEXTINPUT.search}
           value={search}
           onChange={searchOnChange}
           className="w-full p-1 pl-8 dark:text-darkTextLightElements text-lightText bg-darkTextLightElements dark:bg-darkHeader placeholder-gray-600 dark:placeholder-darkTextLightElements focus:outline-none"

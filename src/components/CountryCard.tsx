@@ -1,8 +1,10 @@
 import Link from "next/link";
 
 import { ImageContainer } from "./ImgContainer";
+import { SUBTITLECARD } from "@/i18n/es";
 import { Text } from "./Text";
 import { Title } from "./Title";
+
 
 
 function CountryCard({
@@ -28,10 +30,10 @@ function CountryCard({
 				/>
 				<div className="p-4 pb-10 space-y-4 dark:bg-darkHeader">
 					<Title title={common} classes="text-2xl mt-6 mb-6" />
-					<Text contentTitle="population" content={population} />
-					<Text contentTitle="region" content={region} />
+					<Text contentTitle={SUBTITLECARD.population} content={population} />
+					<Text contentTitle={SUBTITLECARD.region} content={region} />
 					<Text
-						contentTitle="capital"
+						contentTitle={SUBTITLECARD.capital}
 						content={capital.length ? capital : "N/A"}
 					/>
 				</div>

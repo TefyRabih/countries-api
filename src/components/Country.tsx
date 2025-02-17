@@ -2,8 +2,11 @@ import { useGetAllCountriesQuery } from "@/redux/services/countriesApiSlice";
 
 import { BorderLink } from "./BorderLink";
 import { ImageContainer } from "./ImgContainer";
+import { SUBTITLECARD } from "@/i18n/es";
 import { Text } from "./Text";
 import { Title } from "./Title";
+
+
 
 
 function Country({
@@ -61,24 +64,24 @@ function Country({
         <div className="flex md:flex-row gap-8 sm: flex-col justify-between">
           <div className="mb-4 md:mb-0">
             <Text
-              contentTitle="Native Name"
+              contentTitle= {SUBTITLECARD.name}
               content={official.toLocaleString()}
             />
             <Text
-              contentTitle="population"
+              contentTitle={SUBTITLECARD.population}
               content={population.toLocaleString()}
             />
-            <Text contentTitle="region" content={region ?? "N/A"} />
-            <Text contentTitle="sub region" content={subregion ?? "N/A"} />
-            <Text contentTitle="capital" content={capital ?? "N/A"} />
+            <Text contentTitle={SUBTITLECARD.region} content={region ?? "N/A"} />
+            <Text contentTitle={SUBTITLECARD.subRegion} content={subregion ?? "N/A"} />
+            <Text contentTitle={SUBTITLECARD.capital} content={capital ?? "N/A"} />
           </div>
           <div className="flex flex-col">
-            <Text contentTitle="top level domain" content={tld.join(" | ")} />
-            <Text contentTitle="currencies" content={displayCurrencies} />
-            <Text contentTitle="languages" content={displayLangs} />
+            <Text contentTitle={SUBTITLECARD.toplevel} content={tld.join(" | ")} />
+            <Text contentTitle={SUBTITLECARD.currencies} content={displayCurrencies} />
+            <Text contentTitle={SUBTITLECARD.languages} content={displayLangs} />
           </div>
         </div>
-        <h3 className="text-lg font-semibold ">Border Countries:</h3>
+        <h3 className="text-lg font-semibold ">{SUBTITLECARD.titleBorder}</h3>
         <ul className="flex flex-wrap min-w-40 gap-4">
           {borders ? (
             borders.flatMap((border) => (
@@ -90,7 +93,7 @@ function Country({
             ))
           ) : (
             <li>
-              <p className="text-lg">No tiene países fronterizos</p>
+              <p className="text-lg">{SUBTITLECARD.noBorder}</p>
             </li>
           )}
         </ul>
