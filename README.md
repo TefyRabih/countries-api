@@ -43,7 +43,6 @@ cd countries-api
 npm install
 4. Ejecuta la aplicación:
 npm run dev
-# or
 yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) con tu navegador para ver el resultado.
