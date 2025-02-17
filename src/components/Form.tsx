@@ -9,7 +9,7 @@ function Form({
   selectOnChange,
 }: FromProps) {
   return (
-    <form className="flex flex-col justify-between gap-8 pb-10 md:flex-row">
+    <form className="flex w-full flex-col justify-between gap-8 pb-10 md:flex-row">
       <div className="flex items-center shadow-md rounded-md bg-darkTextLightElements dark:bg-darkHeader p-1 md:w-96">
         <FontAwesomeIcon
           icon={faMagnifyingGlass}

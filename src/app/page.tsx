@@ -34,7 +34,7 @@ export default function Home() {
           region={selectRegion}
           selectOnChange={(e) => setSelectRegion(e.target.value)}
         />
-        <section className="grid grid-cols-1  m-0 gap-8 sm:grid-cols-2 md:grid-cols-4 h-[950px] overflow-y-scroll justify-center justify-items-center content-start">
+        <section className="grid grid-cols-1 m-0 gap-8 sm:grid-cols-2 md:grid-cols-4 h-[950px] overflow-y-scroll justify-center justify-items-center content-start">
           {isLoading && skeletonLoading}
           {countries?.slice(0,).map((country) => (
             <CountryCard key={country.cca3} {...country} />
