@@ -10,4 +10,4 @@ function ImageContainer({
   return <Image src={src} alt={alt} width={width} height={height} {...props} />;
 }
 
-export default ImageContainer;
+export { ImageContainer };

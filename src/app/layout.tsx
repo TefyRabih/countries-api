@@ -1,8 +1,10 @@
 "use client";
 import { useReducer } from "react";
-import { Providers } from "@/redux/provider";
+
 import { Nunito_Sans } from "next/font/google";
-import Header from "@/components/Header";
+
+import { Header } from "@/components/Header";
+import { Providers } from "@/redux/provider";
 import "./globals.css";
 
 
@@ -29,7 +31,7 @@ export default function RootLayout({ children }: ChildrenProps) {
 				<meta name="description" content={metadata.description} />
 				<title>{metadata.title}</title>
 			</head>
-			<body className={`${darkMode ? "dark" : "light"}  ${nunitoSans.variable}`}>
+			<body className={`${darkMode ? "dark" : "light"}  ${nunitoSans.variable} overflow-hidden`}>
 				<Header mode={darkMode} onClick={setDarkMode} />
 				<Providers>{children}</Providers>
 			</body>

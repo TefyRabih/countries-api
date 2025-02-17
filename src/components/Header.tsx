@@ -1,8 +1,10 @@
-import Link from "next/link";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon as regularMoon } from "@fortawesome/free-regular-svg-icons";
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
+import { Button } from "./Button";
 
 function Header({ mode, onClick }: HeaderProps) {
   return (
@@ -15,10 +17,10 @@ function Header({ mode, onClick }: HeaderProps) {
             </Link>
           </li>
           <li>
-            <button
+            <Button
               onClick={onClick}
               title={mode ? "Light Mode" : "Dark Mode"}
-              className="p-2 text-3xl flex items-center gap-2 border-none bg-transparent"
+              classes="p-2 text-3xl flex items-center gap-2 border-none bg-transparent"
             >
               {mode ? (
                 <FontAwesomeIcon
@@ -34,7 +36,7 @@ function Header({ mode, onClick }: HeaderProps) {
               <span className="text-sm">
                 {mode ? "Light Mode" : "Dark Mode"}
               </span>
-            </button>
+            </Button>
           </li>
         </ul>
       </nav>
@@ -42,4 +44,4 @@ function Header({ mode, onClick }: HeaderProps) {
   );
 }
 
-export default Header;
+export { Header };

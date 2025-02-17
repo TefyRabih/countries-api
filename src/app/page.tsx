@@ -1,9 +1,11 @@
 "use client";
 import { useCountries } from "@/hooks/useCountries";
-import Form from "@/components/Form";
-import Layout from "@/components/Layout";
-import Card from "@/components/Card";
-import CountryCard from "@/components/CountryCard";
+
+import { Card } from "@/components/Card";
+import { CountryCard } from "@/components/CountryCard";
+import { Form } from "@/components/Form";
+import { Layout } from "@/components/Layout";
+
 
 export default function Home() {
   const {
@@ -22,7 +24,7 @@ export default function Home() {
 
   const n = 10;
   const skeletons = Array.from({ length: n }, (_, index) => index + 1);
-  const skeletonLoading = isLoading && skeletons.map((skeleton) => <Card key={skeleton} />);
+  const skeletonLoading =  isLoading && skeletons.map((skeleton) => <Card key={skeleton}  />);
 
   return (
     <Layout>

@@ -1,6 +1,8 @@
-import { regions } from "@/constant/region";
-import { faAngleDown, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+
+import { regions } from "@/constant/region";
+
 
 function Form({
   search,
@@ -48,4 +50,4 @@ function Form({
   );
 }
 
-export default Form;
+export { Form };

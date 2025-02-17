@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+
 function BorderLink({ href, borderName }: BorderLinkProps) {
 	return (
 		<li>
@@ -13,4 +14,4 @@ function BorderLink({ href, borderName }: BorderLinkProps) {
 	);
 }
 
-export default BorderLink;
+export { BorderLink };

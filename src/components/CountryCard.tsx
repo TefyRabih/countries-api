@@ -1,7 +1,9 @@
 import Link from "next/link";
-import ImageContainer from "./ImgContainer";
-import Title from "./Title";
-import Text from "./Text";
+
+import { ImageContainer } from "./ImgContainer";
+import { Text } from "./Text";
+import { Title } from "./Title";
+
 
 function CountryCard({
 	cca3,
@@ -38,4 +40,4 @@ function CountryCard({
 	);
 }
 
-export default CountryCard;
+export { CountryCard };

@@ -1,3 +1,4 @@
+
 function Card() {
   return (
     <article className="h-[356px] w-full overflow-hidden rounded-lg">
@@ -12,4 +13,4 @@ function Card() {
   );
 }
 
-export default Card;
+export { Card };

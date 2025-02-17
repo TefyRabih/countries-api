@@ -6,6 +6,9 @@ export function useCountries() {
 	const [search, setSearch] = useState("");
 	const [selectRegion, setSelectRegion] = useState("");
 
+	/* La función `searchParameters` definida mediante `useCallback` es responsable de filtrar la lista
+	 * de países según la consulta de búsqueda y la región seleccionada 
+	*/
 	const searchParameters = useCallback(
 		(query: string, queryRegion: string) => {
 			const searchLowerCase = query.toLowerCase();
@@ -22,6 +25,9 @@ export function useCountries() {
 		return searchParameters(search, selectRegion);
 	}, [search, selectRegion, searchParameters]);
 
+	/**
+	 * La función `resetSearchResult` borra la entrada de búsqueda y la región seleccionada en un TypeScript React
+	 */
 	function resetSearchResult() {
 		setSearch("");
 		setSelectRegion("");

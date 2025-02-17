@@ -1,13 +1,20 @@
+// Interfaces Base
+interface BaseProps {
+	onClick: () => void;
+}
+
+interface BaseClasses {
+	classes: string;
+}
+
 interface ChildrenProps {
 	children: React.ReactNode;
 }
 
+// Interfaces Específicas
+
 interface LayoutProps extends ChildrenProps {
 	isMain?: boolean;
-}
-
-interface BaseProps {
-	onClick: () => void;
 }
 
 interface HeaderProps extends BaseProps {
@@ -22,12 +29,11 @@ interface FromProps extends BaseProps {
 }
 
 interface ButtonProps extends BaseProps, BaseClasses {
-	title?: string;
-	btnText: React.ReactNode;
-}
-
-interface BaseClasses {
-	classes: string;
+	onClick: () => void;           
+  btnText?: string;             
+  title: string;                 
+  classes?: string;              
+  children?: React.ReactNode; 
 }
 
 interface TitleProps extends BaseClasses {

@@ -9,4 +9,4 @@ function Text({ contentTitle, content }: TextProps) {
 	);
 }
 
-export default Text;
+export { Text };
