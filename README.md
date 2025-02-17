@@ -31,19 +31,23 @@ Los usuarios deberían poder:
 - Navegar a los países limítrofes desde la página de detalles de un país.
 - Alternar entre esquemas de color claro y oscuro.
 
-#### 5. **Instrucciones de Instalación**
-## Instalación
+#### 5. **Development**
 
-Para configurar este proyecto localmente, sigue estos pasos:
+Pasos para configurar este proyecto localmente:
+
 1. Clona el repositorio:
-git clone git@github.com:
-2. Navega al directorio del proyecto:
+```bash
+git clone git@github.com:TefyRabih/countries-api.git]
+```text
+2. Navega al directorio del proyecto:```bash
 cd countries-api
-3. Instala las dependencias:
+```text
+3. Instala las dependencias:```bash
 npm install
-4. Ejecuta la aplicación:
+```text
+4. Ejecuta la aplicación:```bash
 npm run dev
-yarn dev
+```text```
 
 Open [http://localhost:3000](http://localhost:3000) con tu navegador para ver el resultado.
 
