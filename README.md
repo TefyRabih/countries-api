@@ -39,16 +39,19 @@ Pasos para configurar este proyecto localmente:
 ```
 git clone git@github.com:TefyRabih/countries-api.git
 ```
-2. Navega al directorio del proyecto:```
+2. Navega al directorio del proyecto:
+```
 cd countries-api
 ```
-3. Instala las dependencias:```
+3. Instala las dependencias:
+```
 npm install
 ```
-4. Ejecuta la aplicación:```
+4. Ejecuta la aplicación:
+```
 npm run dev
-
-Open [http://localhost:3000](https://nextjs.org/docs) con tu navegador para ver el resultado.
+```
+En la barra de direcciones de su navegador, escriba la siguiente URL: [http://localhost:3000](https://nextjs.org/docs) para ver el resultado.
 
 #### 6. **Aprendizajes Clave**
 ### Lo Que Aprendí
